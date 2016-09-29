@@ -1,0 +1,67 @@
+CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+h1 {
+	border-bottom: 2px solid #666;
+	width: 300px;
+	font-size: 28px;
+}
+
+form {
+	text-align: right;
+	width: 300px;
+	line-height: 25px;
+	/*position: absolute;*/
+}
+
+button {
+	/*margin-top: 5px;*/
+	border-radius: 4px;
+	background: linear-gradient(white, #ccc);
+	border: 1px solid;
+	height: 20px;
+	width: 250px;
+	display: block;
+	margin-left: 25px;
+}
+
+.adder {
+	position: fixed;
+}
+
+.cardBorder {
+	border: 2px solid black;
+	padding: 10px;
+	min-height: 150px;
+	width: 300px;
+	vertical-align: top;
+	margin: 15px;
+}
+
+.cards {
+	display: inline-block;
+	margin-left: 320px;
+}
+
+.descriptions {
+	position: relative;
+	top: 10px;
+	padding: 0 5px;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: inline;
+}
+img {
+	height: 25px;
+	width: 25px;
+	margin: 5px;
+	vertical-align: text-bottom;
+}

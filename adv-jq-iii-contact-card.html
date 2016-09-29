@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Advanced jQuery Assignment III: Contact Card">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>
+   Advanced jQuery Assignment III: Contact Card
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+   
+   $(document).on('click', '.cardBorder', function(){
+      $(this).children().toggleClass("hide");
+      // $('.contactInfo').toggleClass("hide");
+      // $('.descriptions').toggleClass("hide");
+   })
+
+   $('form').submit(function(){
+    return false;
+   });
+
+   $("button").click(function(){
+      var first = $(".fn").val();
+      var last = $(".ln").val();
+      var email = $(".e").val();
+      var phone = $(".p").val();
+      var description = $(".d").val()
+      console.log(first, last, email, phone);
+      $(".cards").append('<div class="cardBorder"><div class="descriptions hide">' + description + '</div><div class="contactInfo"><p>' + first + ' ' + last + '</p><p>Email: ' + email + '</p><p>Phone: ' + phone + '</p></div></div>');
+      // $(".descriptions").addClass("hide");
+      // $(".descriptions")toggleClass("hide");
+   });
+
+   $("img").hover(function(){
+      $(this).css("transform", "rotate(180deg)");
+   }, function(){
+      $(this).css("transform", "rotate(0deg)");
+   });
+});
+</script>
+</head>
+<body>
+<div class="adder">
+   <h1>Add User <img src='chimpout.jpg' alt='chimpout'></h1>
+   <form>
+      First Name: <input class="fn" type="text" name="firstName" value="First Name"><br>
+      Last Name: <input class="ln" type="text" name="lastName" value="Last Name"><br>
+      Email Address: <input class="e" type="text" name="emailAdd" value="Email Address"><br>
+      Contact No.: <input class="p" type="text" name="phoneNo" value="Phone #"><br>
+      <textarea class="d" name="description" rows="5" cols="46" maxlength="200">Description - 200 Character Maximum</textarea>
+      <button>Add User</button>
+   </form>
+</div>
+<div class="cards"></div>
+</body>      
+</html>
