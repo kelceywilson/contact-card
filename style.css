@@ -14,11 +14,9 @@ form {
 	text-align: right;
 	width: 300px;
 	line-height: 25px;
-	/*position: absolute;*/
 }
 
 button {
-	/*margin-top: 5px;*/
 	border-radius: 4px;
 	background: linear-gradient(white, #ccc);
 	border: 1px solid;
